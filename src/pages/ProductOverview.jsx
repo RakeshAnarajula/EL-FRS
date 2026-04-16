@@ -43,7 +43,7 @@ const ProductOverview = () => {
             </p>
             <div className="d-flex flex-wrap gap-3 mt-4">
               <Button as={Link} to="/modules" variant="primary" size="lg" className="px-4 shadow">Explore Modules</Button>
-              <Button as={Link} to="/core-capabilities" variant="outline-dark" size="lg" className="px-4">View Workflow</Button>
+              <Button as={Link} to="/core-capabilities" variant="outline-success" size="lg" className="px-4">View Workflow</Button>
             </div>
           </Col>
           <Col lg={6}>
@@ -65,7 +65,7 @@ const ProductOverview = () => {
         <Row className="g-4 mt-5">
           {overviewCards.map((item, idx) => (
             <Col md={6} lg={3} key={idx}>
-              <Card className="h-100 border-0 glass-panel premium-shadow text-center p-4">
+              <Card className="h-100 border-0 glass-panel premium-shadow text-center p-4 orange-hover-card">
                 <div className="text-primary mb-3 mx-auto">{item.icon}</div>
                 <h5 className="fw-bold text-dark">{item.title}</h5>
                 <p className="text-muted small mb-0">{item.desc}</p>
@@ -138,7 +138,7 @@ const ProductOverview = () => {
             { icon: <MdAutoGraph size={26} />, title: "Leadership clarity", desc: "Dashboards turn daily operations into planning signals for faster decisions." }
           ].map((item) => (
             <Col md={4} key={item.title}>
-              <div className="glass-panel p-4 h-100 premium-shadow">
+              <div className="glass-panel p-4 h-100 premium-shadow orange-hover-card">
                 <div className="text-primary mb-3">{item.icon}</div>
                 <h5 className="fw-bold">{item.title}</h5>
                 <p className="text-muted mb-0">{item.desc}</p>

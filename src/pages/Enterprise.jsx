@@ -13,11 +13,7 @@ const operations = [
   {
     title: "Multi-Branch Control",
     desc: "Centralize your policies, handle diverse branch types, and unify operations across regions from a single master dashboard."
-  },
-  // {
-  //   title: "Custom Security & RBAC",
-  //   desc: "Enforce strict IP restrictions, manage deep designation hierarchies, and control exactly who sees what data with Role-Based Access Control."
-  // }
+  }
 ];
 
 const enterpriseLayers = [
@@ -26,12 +22,7 @@ const enterpriseLayers = [
   "Executive visibility across attendance, work, and incentives"
 ];
 
-const enterpriseImages = [
-  "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=600",
-  "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600",
-  "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=600",
-  "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=600"
-];
+const enterpriseImage = "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=600";
 
 const governance = [
   { title: "Policy governance", desc: "Run different leave, shift, access, and compliance rules without losing central oversight." },
@@ -94,7 +85,7 @@ const Enterprise = () => {
           <Row className="g-4 align-items-stretch">
             <Col lg={5}>
               <div className="page-motion-strip premium-shadow h-100">
-                <img className="motion-bg-image" src={enterpriseImages[0]} alt="Enterprise team operations" />
+                <img className="motion-bg-image" src={enterpriseImage} alt="Enterprise team operations" />
                 <div className="motion-copy">
                   <p className="section-eyebrow text-white-50">Enterprise rhythm</p>
                   <h3 className="fw-bold mb-0">Govern many teams without slowing one team down.</h3>
@@ -124,7 +115,7 @@ const Enterprise = () => {
               <p className="text-white-50 mb-0">Give HR, admins, managers, and leadership the same reliable structure.</p>
             </Col>
             <Col lg={4} className="text-lg-end">
-              <Button as={Link} to="/contact" variant="light" size="lg" className="px-4">Contact Sales</Button>
+              <Button as={Link} to="/contact" variant="light" size="lg" className="px-4">Contact Us</Button>
             </Col>
           </Row>
         </div>

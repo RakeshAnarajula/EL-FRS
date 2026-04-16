@@ -47,7 +47,7 @@ const Footer = () => {
           </Col>
           <Col lg={4} md={4}>
             <h6 className="fw-bold mb-3 text-white">Contact Us</h6>
-            <p className="text-white-50 mb-1">Email: hello@EntroLabsHRMS.com</p>
+            <p className="text-white-50 mb-1">Email: HR@EntroLabsHRMS.com</p>
             <p className="text-white-50">Phone: +1 (800) 123-4567</p>
           </Col>
         </Row>

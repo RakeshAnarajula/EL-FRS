@@ -42,12 +42,7 @@ const featureGroups = [
   }
 ];
 
-const featureImages = [
-  "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600",
-  "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=600",
-  "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=600",
-  "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600"
-];
+const featureImage = "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600";
 
 const dailyUse = [
   { title: "Start the day", desc: "Validate attendance, late marks, roster coverage, and active leave requests." },
@@ -119,7 +114,7 @@ const Features = () => {
         <Row className="g-4 align-items-stretch">
           <Col lg={6}>
             <div className="page-motion-strip premium-shadow h-100">
-              <img className="motion-bg-image" src={featureImages[0]} alt="Feature workflow" />
+              <img className="motion-bg-image" src={featureImage} alt="Feature workflow" />
               <div className="motion-copy">
                 <p className="section-eyebrow text-white-50">Daily workflow</p>
                 <h3 className="fw-bold mb-0">Useful features for the moments your teams repeat every day.</h3>

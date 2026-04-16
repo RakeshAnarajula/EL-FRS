@@ -1,6 +1,23 @@
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { MdNotificationsActive, MdRocketLaunch, MdTune } from 'react-icons/md';
+import {
+  MdAccountTree,
+  MdApi,
+  MdAssessment,
+  MdBadge,
+  MdDashboard,
+  MdEmojiEvents,
+  MdEventAvailable,
+  MdGroups,
+  MdNotificationsActive,
+  MdOutlineMail,
+  MdPolicy,
+  MdRocketLaunch,
+  MdSms,
+  MdSupportAgent,
+  MdTune,
+  MdWorkspaces
+} from 'react-icons/md';
 
 const plans = [
   {
@@ -11,11 +28,11 @@ const plans = [
     button: "Request Invite",
     variant: "outline-primary",
     features: [
-      "Free access by invite",
-      "Core dashboard access",
-      "Basic attendance and leave workflows",
-      "Employee directory setup",
-      "Starter reporting tools"
+      { icon: <MdOutlineMail size={18} />, text: "Free access by invite" },
+      { icon: <MdDashboard size={18} />, text: "Core dashboard access" },
+      { icon: <MdEventAvailable size={18} />, text: "Basic attendance and leave workflows" },
+      { icon: <MdBadge size={18} />, text: "Employee directory setup" },
+      { icon: <MdAssessment size={18} />, text: "Starter reporting tools" }
     ]
   },
   {
@@ -27,11 +44,11 @@ const plans = [
     variant: "primary",
     recommended: true,
     features: [
-      "SMS notifications",
-      "WhatsApp alerts",
-      "API integration support",
-      "Advanced attendance and leave flows",
-      "Branch-ready workforce operations"
+      { icon: <MdSms size={18} />, text: "SMS notifications" },
+      { icon: <MdNotificationsActive size={18} />, text: "WhatsApp alerts" },
+      { icon: <MdApi size={18} />, text: "API integration support" },
+      { icon: <MdEventAvailable size={18} />, text: "Advanced attendance and leave flows" },
+      { icon: <MdAccountTree size={18} />, text: "Branch-ready workforce operations" }
     ]
   },
   {
@@ -42,11 +59,11 @@ const plans = [
     button: "Contact Us",
     variant: "primary",
     features: [
-      "All paid plan capabilities",
-      "Custom Policy & Compliance Templates",
-      "Dedicated Account Manager",
-      "Performance-based Incentives",
-      "Hiring for team age group 21 to 24"
+      { icon: <MdWorkspaces size={18} />, text: "All paid plan capabilities" },
+      { icon: <MdPolicy size={18} />, text: "Custom Policy & Compliance Templates" },
+      { icon: <MdSupportAgent size={18} />, text: "Dedicated Account Manager" },
+      { icon: <MdEmojiEvents size={18} />, text: "Performance-based Incentives" },
+      { icon: <MdGroups size={18} />, text: "Hiring for team age group 21 to 24" }
     ]
   }
 ];
@@ -66,12 +83,7 @@ const buyingNotes = [
   }
 ];
 
-const pricingImages = [
-  "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&q=80&w=600",
-  "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=600",
-  "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=600",
-  "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600"
-];
+const pricingImage = "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&q=80&w=600";
 
 const valueCards = [
   { title: "No surprise setup", desc: "Plan modules, policies, branches, and reporting before launch." },
@@ -119,9 +131,9 @@ const Pricing = () => {
                 <p className="text-muted mb-4">Clear pricing for teams that need workforce visibility, communication, integrations, and enterprise-ready controls.</p>
                 <ul className="list-unstyled text-start mb-5 d-inline-block mx-auto">
                   {plan.features.map((feature) => (
-                    <li className="mb-3 d-flex align-items-start gap-2" key={feature}>
-                      <span className="check-badge">OK</span>
-                      <span>{feature}</span>
+                    <li className="mb-3 d-flex align-items-start gap-2" key={feature.text}>
+                      <span className="check-badge">{feature.icon}</span>
+                      <span>{feature.text}</span>
                     </li>
                   ))}
                 </ul>
@@ -172,7 +184,7 @@ const Pricing = () => {
         <Row className="g-4 align-items-stretch">
           <Col lg={6}>
             <div className="page-motion-strip premium-shadow h-100">
-              <img className="motion-bg-image" src={pricingImages[0]} alt="Pricing planning session" />
+              <img className="motion-bg-image" src={pricingImage} alt="Pricing planning session" />
               <div className="motion-copy">
                 <p className="section-eyebrow text-white-50">Plan with confidence</p>
                 <h3 className="fw-bold mb-0">Choose a plan around how your teams actually operate.</h3>

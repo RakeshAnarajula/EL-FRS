@@ -21,12 +21,7 @@ const moduleStories = [
   }
 ];
 
-const moduleImages = [
-  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600",
-  "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=600",
-  "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
-  "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=600"
-];
+const moduleImage = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600";
 
 const moduleJourney = [
   { title: "Capture", desc: "Collect attendance, leave requests, work logs, and employee changes from the right users." },
@@ -86,7 +81,7 @@ const Modules = () => {
         <Row className="g-4 align-items-stretch">
           <Col lg={6}>
             <div className="page-motion-strip premium-shadow h-100">
-              <img className="motion-bg-image" src={moduleImages[0]} alt="Module workspace" />
+              <img className="motion-bg-image" src={moduleImage} alt="Module workspace" />
               <div className="motion-copy">
                 <p className="section-eyebrow text-white-50">Module journey</p>
                 <h3 className="fw-bold mb-0">Every module moves work from capture to action.</h3>

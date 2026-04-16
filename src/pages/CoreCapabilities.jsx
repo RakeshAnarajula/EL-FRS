@@ -8,12 +8,7 @@ const capabilityProof = [
   { value: "Secure", label: "compliance controls" }
 ];
 
-const capabilityImages = [
-  "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=600",
-  "https://images.unsplash.com/photo-1542626991-cbc4e32524cc?auto=format&fit=crop&q=80&w=600",
-  "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=600",
-  "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=600"
-];
+const capabilityImage = "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=600";
 
 const capabilityLayers = [
   { title: "Plan smarter", desc: "Build rosters, policies, holidays, and workforce structures around actual branch needs." },
@@ -71,7 +66,7 @@ const CoreCapabilities = () => {
           <Row className="g-4 align-items-stretch">
             <Col lg={6}>
               <div className="page-motion-strip premium-shadow h-100">
-                <img className="motion-bg-image" src={capabilityImages[0]} alt="Capability planning" />
+                <img className="motion-bg-image" src={capabilityImage} alt="Capability planning" />
                 <div className="motion-copy">
                   <p className="section-eyebrow text-white-50">Operating layers</p>
                   <h3 className="fw-bold mb-0">Capabilities that support planning, action, and measurement.</h3>

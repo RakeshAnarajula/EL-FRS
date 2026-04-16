@@ -1,6 +1,6 @@
 import { Container, Row, Col, Badge, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { SiGoogleanalytics, SiWhatsapp, SiSalesforce } from 'react-icons/si';
+import { SiWhatsapp, SiSalesforce } from 'react-icons/si';
 import { MdPayment, MdApi } from 'react-icons/md';
 
 const integrationsList = [
@@ -32,12 +32,7 @@ const integrationFlow = [
   "Trigger alerts, exports, approvals, and reporting updates"
 ];
 
-const integrationImages = [
-  "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600",
-  "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=600",
-  "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
-  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600"
-];
+const integrationImage = "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600";
 
 const automationCards = [
   { title: "Employee alerts", desc: "Send shift, leave, attendance, and approval notifications through connected channels." },
@@ -113,7 +108,7 @@ const Integrations = () => {
         <Row className="g-4 align-items-stretch">
           <Col lg={6}>
             <div className="page-motion-strip premium-shadow h-100">
-              <img className="motion-bg-image" src={integrationImages[0]} alt="Integration data workflow" />
+              <img className="motion-bg-image" src={integrationImage} alt="Integration data workflow" />
               <div className="motion-copy">
                 <p className="section-eyebrow text-white-50">Automation layer</p>
                 <h3 className="fw-bold mb-0">Keep every system updated from the same workforce truth.</h3>

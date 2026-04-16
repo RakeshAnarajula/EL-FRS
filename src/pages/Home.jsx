@@ -1,10 +1,12 @@
-import React from 'react';
 import HeroSection from '../components/HeroSection';
 import CapabilitiesCarousel from '../components/CapabilitiesCarousel';
 import ModulesOverlay from '../components/ModulesOverlay';
 import FeatureSplit from '../components/FeatureSplit';
 import { Container, Row, Col } from 'react-bootstrap';
 import { MdCalendarMonth, MdQueryStats, MdSchedule } from 'react-icons/md';
+import mobileApp1 from '../assets/mobile_app_1.png';
+import mobileApp2 from '../assets/mobile_app_2.png';
+import mobileApp3 from '../assets/mobile_app_3.png';
 
 const homeSummaries = [
   {
@@ -35,7 +37,6 @@ const Home = () => {
     <>
       <HeroSection />
 
-      {/* Quick summary below hero */}
       <Container className="py-5">
         <Row className="text-center g-4">
           {homeSummaries.map((item) => (
@@ -51,6 +52,38 @@ const Home = () => {
           ))}
         </Row>
       </Container>
+
+      {/* <section className="mobile-app-showcase section-shell"> */}
+      <section className="section-shell">
+        <Container>
+          <Row className="align-items-center">
+            <Col lg={6}>
+              <p className="section-eyebrow">Mobile workforce access</p>
+              <h2 className="display-6 fw-bold text-gradient">Our Mobile App</h2>
+              <p className="lead text-muted mt-3">
+                Our platform is also available as a mobile app, allowing users to manage attendance, tasks, leave requests, and daily activities anytime, anywhere.
+              </p>
+              <p className="fw-semibold text-dark mb-0">
+                A smart and seamless mobile experience for modern workforce management.
+              </p>
+            </Col>
+
+            <Col lg={6}>
+              <div className="mobile-app-grid">
+                <div className="mobile-app-screen-card premium-shadow">
+                  <img src={mobileApp1} alt="Mobile app attendance screen" />
+                </div>
+                <div className="mobile-app-screen-card premium-shadow">
+                  <img src={mobileApp2} alt="Mobile app task screen" />
+                </div>
+                <div className="mobile-app-screen-card premium-shadow">
+                  <img src={mobileApp3} alt="Mobile app leave screen" />
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
 
       <section className="soft-band section-shell">
         <Container>
@@ -78,18 +111,15 @@ const Home = () => {
         </Container>
       </section>
 
-      {/* Brand New Full Feature Card Section */}
       <FeatureSplit />
 
-      {/* Continuing with existing sections underneath */}
-      <div className="py-5" style={{ backgroundColor: 'transparent' }}>
+      <div className="py-5">
         <CapabilitiesCarousel />
       </div>
 
       <div className="py-5">
         <ModulesOverlay />
       </div>
-
     </>
   );
 };
