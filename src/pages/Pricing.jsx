@@ -4,32 +4,49 @@ import { MdNotificationsActive, MdRocketLaunch, MdTune } from 'react-icons/md';
 
 const plans = [
   {
-    name: "Premium Plan",
-    price: "Custom",
+    name: "Freemium",
+    price: "Rs. 0",
+    subtitle: "Free upon invite basis",
     tone: "text-primary",
-    button: "Get Started",
+    button: "Request Invite",
     variant: "outline-primary",
     features: [
-      "Full Dashboard & Analytics",
-      "Advanced Attendance Tracking",
-      "Leave Management Approvals",
-      "Shift & Roster Planning",
-      "Basic Reporting Tools"
+      "Free access by invite",
+      "Core dashboard access",
+      "Basic attendance and leave workflows",
+      "Employee directory setup",
+      "Starter reporting tools"
     ]
   },
   {
-    name: "Enterprise Plan",
-    price: "Let's Talk",
+    name: "Paid",
+    price: "Rs. 30 / employee",
+    subtitle: "Per month",
     tone: "text-dark",
-    button: "Contact Sales",
+    button: "Start Paid Plan",
     variant: "primary",
     recommended: true,
     features: [
-      "All Premium Features",
+      "SMS notifications",
+      "WhatsApp alerts",
+      "API integration support",
+      "Advanced attendance and leave flows",
+      "Branch-ready workforce operations"
+    ]
+  },
+  {
+    name: "Enterprise",
+    price: "Custom Pricing",
+    subtitle: "Built around your organization",
+    tone: "text-dark",
+    button: "Contact Us",
+    variant: "primary",
+    features: [
+      "All paid plan capabilities",
       "Custom Policy & Compliance Templates",
       "Dedicated Account Manager",
-      "Performance-based Incentives Engine",
-      "Hiring tools for team age group 21 to 24"
+      "Performance-based Incentives",
+      "Hiring for team age group 21 to 24"
     ]
   }
 ];
@@ -70,7 +87,7 @@ const Pricing = () => {
           <Col lg={6}>
             <p className="section-eyebrow">Flexible plans</p>
             <h1 className="display-4 fw-bold text-gradient">Simple, Transparent Pricing</h1>
-            <p className="lead text-muted mt-3">Choose the right setup for your workforce operations with flexible and clearly defined plans. Whether you’re a growing team or a large enterprise, our pricing is designed to scale with your needs. Enjoy predictable costs, no hidden charges, and access to powerful features that deliver real value—helping you manage your workforce efficiently and confidently.</p>
+            <p className="lead text-muted mt-3">Choose from invite-based free access, a paid communication and integration plan, or custom enterprise pricing for larger workforce operations.</p>
           </Col>
           <Col lg={6}>
             <div className="visual-panel premium-shadow">
@@ -89,7 +106,7 @@ const Pricing = () => {
 
         <Row className="g-4 justify-content-center">
           {plans.map((plan) => (
-            <Col md={5} key={plan.name}>
+            <Col md={4} key={plan.name}>
               <div className={`glass-panel text-center p-5 h-100 premium-shadow position-relative ${plan.recommended ? 'border border-primary' : ''}`}>
                 {plan.recommended && (
                   <div className="position-absolute top-0 start-50 translate-middle badge p-2 px-3 shadow" style={{ background: 'linear-gradient(135deg, #0b5ed7 0%, #0f766e 100%)' }}>
@@ -97,8 +114,9 @@ const Pricing = () => {
                   </div>
                 )}
                 <h3 className={`fw-bold mb-3 ${plan.tone}`}>{plan.name}</h3>
-                <h2 className="display-5 fw-bold mb-4">{plan.price}</h2>
-                <p className="text-muted mb-4">Complete HRMS tools tailored for scaling teams, branches, approvals, and compliance needs.</p>
+                <h2 className="fw-bold mb-2">{plan.price}</h2>
+                <p className="text-muted fw-semibold mb-4">{plan.subtitle}</p>
+                <p className="text-muted mb-4">Clear pricing for teams that need workforce visibility, communication, integrations, and enterprise-ready controls.</p>
                 <ul className="list-unstyled text-start mb-5 d-inline-block mx-auto">
                   {plan.features.map((feature) => (
                     <li className="mb-3 d-flex align-items-start gap-2" key={feature}>
@@ -121,7 +139,7 @@ const Pricing = () => {
             <div className="bg-white p-4 rounded-4 shadow-sm border border-light">
               <h5 className="fw-bold text-dark">Communication Pack</h5>
               <p className="text-muted mb-2">Automate notifications directly to your employees' mobile devices for shifts, approvals, and payroll.</p>
-              <h4 className="text-primary fw-bolder mt-3">Paid SMS and WhatsApp API integration at Rs. 30 per employee</h4>
+              <h4 className="text-primary fw-bolder mt-3">Paid plan: Rs. 30 per employee per month for SMS, WhatsApp, and API integration.</h4>
             </div>
           </Col>
         </Row>
