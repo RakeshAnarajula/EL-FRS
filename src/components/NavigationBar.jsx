@@ -26,7 +26,7 @@ const NavigationBar = () => {
             <Nav.Link as={NavLink} to="/integrations">Integrations</Nav.Link>
             <Nav.Link as={NavLink} to="/enterprise">Enterprise</Nav.Link>
             <Button as={Link} to="/contact" variant="primary" className="ms-3 px-4 rounded-pill shadow-sm">
-              Contact Sales
+              Contact Us
             </Button>
           </Nav>
         </Navbar.Collapse>
