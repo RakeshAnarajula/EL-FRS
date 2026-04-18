@@ -1,5 +1,7 @@
 import { Container, Row, Col, Badge, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import enterpriseOffice from '../assets/enterprise-office.jpg';
+import enterpriseOperations from '../assets/enterprise-operations.jpg';
 
 const operations = [
   {
@@ -22,7 +24,7 @@ const enterpriseLayers = [
   "Executive visibility across attendance, work, and incentives"
 ];
 
-const enterpriseImage = "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=600";
+const enterpriseImage = enterpriseOffice;
 
 const governance = [
   { title: "Policy governance", desc: "Run different leave, shift, access, and compliance rules without losing central oversight." },
@@ -36,7 +38,7 @@ const Enterprise = () => {
       <Container className="section-shell">
         <Row className="align-items-center g-5 mb-5">
           <Col lg={7}>
-            <Badge bg="dark" className="px-3 py-2 mb-3">ElevateHR Enterprise</Badge>
+            <Badge bg="success" className="px-3 py-2 mb-3">Entro LabsHR Enterprise</Badge>
             <h1 className="display-4 fw-bold text-gradient">Built for Scale and Complexity</h1>
             <p className="lead text-muted mt-3">
               When standard HR solutions fail to handle multi-branch rosters and specialized workforce controls, Enterprise gives leadership the structure to move faster.
@@ -59,11 +61,11 @@ const Enterprise = () => {
           <Col lg={6}>
             <div className="position-relative">
               <img
-                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800"
+                src={enterpriseOperations}
                 alt="Enterprise Operations"
-                className="w-100 rounded-4 premium-shadow"
+                className="w-100 rounded-4 premium-shadow enterprise-hero-image"
               />
-              <div className="position-absolute bottom-0 end-0 p-4 bg-white rounded-start-4 shadow-sm" style={{ transform: 'translate(20px, 20px)' }}>
+              <div className="enterprise-stat-card position-absolute bottom-0 end-0 p-4 bg-white shadow-sm">
                 <h4 className="fw-bolder text-primary mb-0">99.9% Uptime</h4>
                 <small className="text-muted">Enterprise SLA</small>
               </div>

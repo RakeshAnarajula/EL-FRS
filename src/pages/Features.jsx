@@ -11,6 +11,7 @@ import {
   MdShield,
   MdVisibility
 } from 'react-icons/md';
+import featurePlanning from '../assets/feature-planning.jpg';
 
 const features = [
   { title: "End-to-End Designation Mapping", icon: <MdManageAccounts size={24} /> },
@@ -42,7 +43,7 @@ const featureGroups = [
   }
 ];
 
-const featureImage = "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600";
+const featureImage = featurePlanning;
 
 const dailyUse = [
   { title: "Start the day", desc: "Validate attendance, late marks, roster coverage, and active leave requests." },
@@ -64,7 +65,7 @@ const Features = () => {
           <Col lg={6}>
             <div className="visual-panel premium-shadow">
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200"
+                src={featurePlanning}
                 alt="Team feature planning"
               />
               <div className="image-scrim"></div>

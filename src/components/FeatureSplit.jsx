@@ -1,26 +1,24 @@
 import { Container, Row, Col, Badge, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { MdOutlineSecurity, MdOutlineAnalytics, MdBolt } from 'react-icons/md';
+import employeeManagement from '../assets/employee-management.jpg';
 
 const FeatureSplit = () => {
   return (
-    <Container className=" position-relative z-index-2">
-      <div className="glass-panel p-0 overflow-hidden premium-shadow rounded-4 text-dark" style={{ border: '1px solid rgba(0,0,0,0.05)', backgroundColor: 'lightblue' }}>
+    <Container className="position-relative z-index-2">
+      <div className="glass-panel feature-split-shell p-0 overflow-hidden premium-shadow text-dark">
         <Row className="g-0 align-items-center">
-          {/* Left Side: Image */}
           <Col lg={5} className="position-relative h-100">
-            <div style={{ height: '100%', minHeight: '400px', backgroundColor: 'transparent' }}>
+            <div className="feature-split-media">
               <img
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800"
+                src={employeeManagement}
                 alt="Modern Workspace"
-                className="w-100 h-100 object-fit-cover position-absolute top-0 start-0 ms-4"
+                className="feature-split-image"
               />
-              <div className="position-absolute top-0 start-0 w-100 h-100" ></div>
             </div>
           </Col>
 
-          {/* Right Side: Content */}
-          <Col lg={7} className="p-5">
+          <Col lg={7} className="feature-split-content p-5">
             <Badge bg="primary" text="white" className="px-3 py-2 rounded-pill mb-3 shadow-sm border-0">
               Unified Data Center
             </Badge>
@@ -48,7 +46,7 @@ const FeatureSplit = () => {
               </Col>
             </Row>
 
-            <Button as={Link} to="/contact" variant="primary" className="rounded-pill px-4 shadow hover-lift d-inline-flex align-items-center gap-2" style={{ fontWeight: 'bold' }}>
+            <Button as={Link} to="/contact" variant="primary" className="rounded-pill px-4 shadow hover-lift d-inline-flex align-items-center gap-2 fw-bold">
               <MdBolt size={20} /> Empower Your Team
             </Button>
           </Col>

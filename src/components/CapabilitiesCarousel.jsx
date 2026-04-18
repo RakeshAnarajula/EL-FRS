@@ -1,21 +1,24 @@
 import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import multiBranchManagement from '../assets/multi-branch-management.jpg';
+import advancedRosterPlanning from '../assets/advanced-roster-planning.jpg';
+import workforceCompliance from '../assets/workforce-compliance.jpg';
 
 const slides = [
   {
     title: 'Multi-Branch Management',
     content: 'Manage employees across multiple metropolitan and regional locations with centralized analytics, unified payroll processing, and real-time branch synchronization. Empower your location managers with localized dashboards while maintaining robust global administrative oversight from a single pane of glass.',
-    image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=800'
+    image: multiBranchManagement
   },
   {
     title: 'Advanced Roster Planning',
     content: 'Automate complex shift creation and distribution, strictly map branch-specific operational types, and proactively oversee complex workforce logistics with powerful AI-driven policy validations. Minimize schedule conflicts and dramatically reduce employee overtime costs automatically.',
-    image: 'https://images.unsplash.com/photo-1542626991-cbc4e32524cc?auto=format&fit=crop&q=80&w=800'
+    image: advancedRosterPlanning
   },
   {
     title: 'Workforce Compliance',
     content: 'Ensure 100% rigorous adherence to evolving labor laws with highly dynamic built-in policy templates, multi-tiered custom leave structures, and seamless biometric attendance tracking. Secure your entire organization against operational liabilities natively.',
-    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800'
+    image: workforceCompliance
   }
 ];
 
@@ -37,69 +40,53 @@ const CapabilitiesCarousel = () => {
           to { width: 100%; }
         }
       `}</style>
-      <div className="text-center">
+      <div className="text-center mb-4">
         <h2 className="display-5 fw-bold text-gradient">Core Capabilities</h2>
         <p className="text-muted">Enterprise scale features designed for modern teams.</p>
       </div>
 
-      <div className="glass-panel position-relative overflow-hidden premium-shadow" style={{ minHeight: '400px', borderRadius: '24px' }}>
+      <div className="glass-panel capabilities-shell position-relative overflow-hidden premium-shadow">
         <Row className="g-0 h-100 align-items-stretch">
-          {/* Left Side: Background Image Area */}
-          <Col md={7} className="d-flex align-items-stretch p-4" style={{ minHeight: '400px' }}>
-            <div className="position-relative w-100 h-100 rounded-4 overflow-hidden premium-shadow" style={{ border: '5px solid #fff' }}>
+          <Col md={7} className="capabilities-image-column d-flex align-items-stretch p-4">
+            <div className="capabilities-image-frame position-relative w-100 h-100 premium-shadow">
               {slides.map((slide, i) => (
                 <div
                   key={i}
-                  className="position-absolute top-0 start-0 w-100 h-100 transition-opacity"
+                  className="capabilities-image-layer position-absolute top-0 start-0 w-100 h-100"
                   style={{
                     opacity: i === currentIndex ? 1 : 0,
                     transition: 'opacity 1s ease-in-out',
-                    backgroundImage: `url(${slide.image})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center'
+                    backgroundImage: `url(${slide.image})`
                   }}
-                >
-                </div>
+                />
               ))}
             </div>
           </Col>
 
-          {/* Right Side: Content Box */}
-          <Col md={5} className="d-flex flex-column justify-content-center p-5 position-relative" style={{ zIndex: 5 }}>
+          <Col md={5} className="capabilities-content-column d-flex flex-column justify-content-center p-5 position-relative">
             <div className="capabilities-content-wrapper position-relative w-100 h-100 d-flex flex-column justify-content-center">
-              {slides.map((slide, i) => (
-                <div
-                  key={`content-${i}`}
-                  className="position-absolute w-100"
-                  style={{
-                    opacity: i === currentIndex ? 1 : 0,
-                    transform: i === currentIndex ? 'translateY(0)' : 'translateY(20px)',
-                    transition: 'all 0.8s cubic-bezier(0.25, 1, 0.5, 1)',
-                    pointerEvents: i === currentIndex ? 'auto' : 'none'
-                  }}
-                >
-                  <h3 className="fw-bolder mb-3 text-dark">{slide.title}</h3>
-                  <p className="text-muted lead" style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
-                    {slide.content}
-                  </p>
-                  <div className="mt-4">
-                    <div style={{ width: '100%', height: '8px', background: '#e9ecef', borderRadius: '4px', overflow: 'hidden' }}>
-                      {i === currentIndex && (
-                        <div
-                          key={`prog-${currentIndex}`}
-                          style={{
-                            height: '100%',
-                            background: 'linear-gradient(90deg, #0b5ed7, #6610f2)',
-                            animation: 'progressFill 3s linear forwards'
-                          }}
-                        ></div>
-                      )}
-                    </div>
+              <div
+                key={`content-${currentIndex}`}
+                className="capabilities-content-panel w-100"
+                style={{
+                  transition: 'all 0.8s cubic-bezier(0.25, 1, 0.5, 1)'
+                }}
+              >
+                <h3 className="fw-bolder mb-3 text-dark">{slides[currentIndex].title}</h3>
+                <p className="text-muted lead capabilities-copy">
+                  {slides[currentIndex].content}
+                </p>
+                <div className="mt-4">
+                  <div className="capabilities-progress-track">
+                    <div
+                      key={`prog-${currentIndex}`}
+                      className="capabilities-progress-fill"
+                      style={{ animation: 'progressFill 3s linear forwards' }}
+                    ></div>
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
-
           </Col>
         </Row>
       </div>

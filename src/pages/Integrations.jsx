@@ -2,6 +2,8 @@ import { Container, Row, Col, Badge, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { SiWhatsapp, SiSalesforce } from 'react-icons/si';
 import { MdPayment, MdApi } from 'react-icons/md';
+import integrationWorkflow from '../assets/integration-workflow.jpg';
+import connectedSystems from '../assets/connected-systems.jpg';
 
 const integrationsList = [
   {
@@ -32,7 +34,7 @@ const integrationFlow = [
   "Trigger alerts, exports, approvals, and reporting updates"
 ];
 
-const integrationImage = "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600";
+const integrationImage = integrationWorkflow;
 
 const automationCards = [
   { title: "Employee alerts", desc: "Send shift, leave, attendance, and approval notifications through connected channels." },
@@ -54,7 +56,7 @@ const Integrations = () => {
           <Col lg={6}>
             <div className="visual-panel premium-shadow">
               <img
-                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1200"
+                src={connectedSystems}
                 alt="Connected data systems"
               />
               <div className="image-scrim"></div>
@@ -69,7 +71,7 @@ const Integrations = () => {
         <Row className="g-4">
           {integrationsList.map((item, index) => (
             <Col md={6} key={index}>
-              <div className="glass-panel p-5 d-flex align-items-start gap-4 premium-shadow h-100 transition-all">
+              <div className="glass-panel p-5 d-flex align-items-start gap-4 premium-shadow h-100 transition-all orange-hover-card">
                 <div className="flex-shrink-0">
                   {item.icon}
                 </div>

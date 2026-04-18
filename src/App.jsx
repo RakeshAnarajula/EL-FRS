@@ -19,7 +19,7 @@ function App() {
     <>
       <PageLoader />
       <NavigationBar />
-      <main style={{ paddingTop: '80px', minHeight: '80vh' }}>
+      <main className="site-main">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/product-overview" element={<ProductOverview />} />

@@ -2,6 +2,8 @@ import { Container, Row, Col, Badge, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { MdGroups, MdInsights, MdStorefront } from 'react-icons/md';
 import ModulesOverlay from '../components/ModulesOverlay';
+import dashboardAnalytics from '../assets/dashboard-analytics.jpg';
+import enterpriseOffice from '../assets/enterprise-office.jpg';
 
 const moduleStories = [
   {
@@ -21,7 +23,7 @@ const moduleStories = [
   }
 ];
 
-const moduleImage = "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=600";
+const moduleImage = dashboardAnalytics;
 
 const moduleJourney = [
   { title: "Capture", desc: "Collect attendance, leave requests, work logs, and employee changes from the right users." },
@@ -44,7 +46,7 @@ const Modules = () => {
             <Col lg={6}>
               <div className="visual-panel premium-shadow">
                 <img
-                  src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=1200"
+                  src={enterpriseOffice}
                   alt="Modern operations workspace"
                 />
                 <div className="image-scrim"></div>

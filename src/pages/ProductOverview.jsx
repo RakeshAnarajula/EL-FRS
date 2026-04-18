@@ -10,6 +10,8 @@ import {
   MdSyncAlt,
   MdVerifiedUser
 } from 'react-icons/md';
+import productDashboardReview from '../assets/product-dashboard-review.jpg';
+import teamPlanningWork from '../assets/team-planning-work.jpg';
 
 const overviewCards = [
   { icon: <MdOutlineSpaceDashboard size={32} />, title: "Dashboard & Analytics", desc: "Gain actionable insights into your workforce with real-time attendance, leave, and productivity signals." },
@@ -49,7 +51,7 @@ const ProductOverview = () => {
           <Col lg={6}>
             <div className="visual-panel premium-shadow">
               <img
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200"
+                src={productDashboardReview}
                 alt="Operations dashboard review"
               />
               <div className="image-scrim"></div>
@@ -94,7 +96,7 @@ const ProductOverview = () => {
               <Row className="g-3">
                 <Col md={7}>
                   <img
-                    src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=900"
+                    src={teamPlanningWork}
                     alt="Team planning work"
                     className="w-100 image-zoom premium-shadow"
                     style={{ height: '360px', objectFit: 'cover', borderRadius: '8px' }}

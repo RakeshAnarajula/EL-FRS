@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import contactConsultation from '../assets/contact-consultation.jpg';
 
 const initialForm = {
   firstName: '',
@@ -80,22 +81,24 @@ const Contact = () => {
   return (
     <>
       <Container className="section-shell">
-        <Row className="justify-content-center align-items-center g-5">
-          <Col lg={5}>
-            <h1 className=" fw-bolder text-gradient">Build the right workforce setup for your teams.</h1>
+        <Row className="justify-content-center align-items-stretch g-5">
+          <Col md={8} lg={6}>
+            <div className="glass-panel contact-card p-5 premium-shadow rounded-4 contact-equal-card">
+              <h1 className="fw-bolder text-gradient">Build the right workforce setup for your teams.</h1>
 
-            <div className="visual-panel premium-shadow" style={{ minHeight: '280px' }}>
-              <img
-                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1000"
-                alt="Sales consultation"
-              />
-              <div className="image-scrim"></div>
+              <div className="visual-panel premium-shadow flex-grow-1 mt-2 contact-image-panel">
+                <img
+                  src={contactConsultation}
+                  alt="Sales consultation"
+                />
+                <div className="image-scrim"></div>
+              </div>
             </div>
           </Col>
 
           <Col md={8} lg={6}>
-            <div className="glass-panel p-5 premium-shadow rounded-4">
-              <div className="text-center mb-4">
+            <div className="glass-panel contact-card p-5 premium-shadow rounded-4 contact-equal-card">
+              <div className="text-center mb-2">
                 <h1 className="fw-bolder text-dark">Contact Us</h1>
                 <p className="text-muted">Discover how EntroLabs HRMS can transform your multi-branch operations.</p>
               </div>

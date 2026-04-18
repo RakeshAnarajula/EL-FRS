@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useLayoutEffect } from 'react';
 import { Button } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 import { MdKeyboardArrowUp } from 'react-icons/md';
@@ -7,10 +7,9 @@ const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
   const { pathname } = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    const timer = setTimeout(() => setIsVisible(false), 0);
-    return () => clearTimeout(timer);
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    setIsVisible(false);
   }, [pathname]);
 
   useEffect(() => {

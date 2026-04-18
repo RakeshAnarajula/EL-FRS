@@ -18,6 +18,8 @@ import {
   MdTune,
   MdWorkspaces
 } from 'react-icons/md';
+import pricingPlanning from '../assets/pricing-planning.jpg';
+import payrollFinance from '../assets/payroll-finance.jpg';
 
 const plans = [
   {
@@ -83,7 +85,7 @@ const buyingNotes = [
   }
 ];
 
-const pricingImage = "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&q=80&w=600";
+const pricingImage = pricingPlanning;
 
 const valueCards = [
   { title: "No surprise setup", desc: "Plan modules, policies, branches, and reporting before launch." },
@@ -96,7 +98,7 @@ const Pricing = () => {
     <>
       <Container className="section-shell">
         <Row className="align-items-center g-5 mb-5">
-          <Col lg={6}>
+          <Col lg={6} className="mt-0">
             <p className="section-eyebrow">Flexible plans</p>
             <h1 className="display-4 fw-bold text-gradient">Simple, Transparent Pricing</h1>
             <p className="lead text-muted mt-3">Choose from invite-based free access, a paid communication and integration plan, or custom enterprise pricing for larger workforce operations.</p>
@@ -104,7 +106,7 @@ const Pricing = () => {
           <Col lg={6}>
             <div className="visual-panel premium-shadow">
               <img
-                src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200"
+                src={payrollFinance}
                 alt="Pricing and finance planning"
               />
               <div className="image-scrim"></div>

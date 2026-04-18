@@ -1,6 +1,7 @@
 import { Container, Row, Col, Badge, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import CapabilitiesCarousel from '../components/CapabilitiesCarousel';
+import workforceCompliance from '../assets/workforce-compliance.jpg';
 
 const capabilityProof = [
   { value: "Live", label: "branch synchronization" },
@@ -8,7 +9,7 @@ const capabilityProof = [
   { value: "Secure", label: "compliance controls" }
 ];
 
-const capabilityImage = "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=600";
+const capabilityImage = workforceCompliance;
 
 const capabilityLayers = [
   { title: "Plan smarter", desc: "Build rosters, policies, holidays, and workforce structures around actual branch needs." },
@@ -31,7 +32,7 @@ const CoreCapabilities = () => {
             <Col lg={6}>
               <div className="visual-panel premium-shadow">
                 <img
-                  src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1200"
+                  src={workforceCompliance}
                   alt="Enterprise capability workshop"
                 />
                 <div className="image-scrim"></div>
