@@ -7,7 +7,7 @@ import securitySettings from '../assets/HRMS_Policy_Details.png';
 import enterpriseOperations from '../assets/HRMS_Projects.png';
 import payrollFinance from '../assets/HRMS_Work_Module.png';
 import branchManagement from '../assets/HRMS_Branches.png';
-import performanceKpis from '../assets/HRMS_Holidays.png';
+import performanceKpis from '../assets/HRMS_Employees_Report.png';
 
 const modulesData = [
   {
