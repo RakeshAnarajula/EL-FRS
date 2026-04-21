@@ -7,7 +7,7 @@ import workforceCompliance from '../assets/workforce-compliance.jpg';
 const slides = [
   {
     title: 'Multi-Branch Management',
-    content: 'Manage employees across multiple metropolitan and regional locations with centralized analytics, unified payroll processing, and real-time branch synchronization. Empower your location managers with localized dashboards while maintaining robust global administrative oversight from a single pane of glass.',
+    content: 'Manage employees across multiple metropolitan and regional locations with centralized analytics, unified payroll processing, and real-time branch synchronization. Empower your location managers with localized dashboards while maintaining robust global administrative oversight.',
     image: multiBranchManagement
   },
   {

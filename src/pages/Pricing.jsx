@@ -39,7 +39,7 @@ const plans = [
   },
   {
     name: "Paid",
-    price: "Rs. 30 / employee",
+    price: "Rs. 60 / employee",
     subtitle: "Per month",
     tone: "text-dark",
     button: "Start Paid Plan",
