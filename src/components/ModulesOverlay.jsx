@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { Container } from 'react-bootstrap';
-import dashboardAnalytics from '../assets/dashboard-analytics.jpg';
-import attendanceLeaves from '../assets/attendance-leaves.jpg';
-import shiftPlanning from '../assets/shift-planning.jpg';
-import securitySettings from '../assets/security-settings.jpg';
-import enterpriseOperations from '../assets/enterprise-operations.jpg';
-import payrollFinance from '../assets/payroll-finance.jpg';
-import branchManagement from '../assets/branch-management.jpg';
-import performanceKpis from '../assets/performance-kpis.jpg';
+import dashboardAnalytics from '../assets/HRMS Dashboard.png';
+import attendanceLeaves from '../assets/HRMS_Attendance_List.png';
+import shiftPlanning from '../assets/HRMS_Weekly_Roster_Planner.png';
+import securitySettings from '../assets/HRMS_Policy_Details.png';
+import enterpriseOperations from '../assets/HRMS_Projects.png';
+import payrollFinance from '../assets/HRMS_Work_Module.png';
+import branchManagement from '../assets/HRMS_Branches.png';
+import performanceKpis from '../assets/HRMS_Holidays.png';
 
 const modulesData = [
   {
@@ -88,7 +88,7 @@ const ModulesOverlay = () => {
         <p className="text-muted">A fully unified platform managing every stage of the employee lifecycle.</p>
       </div>
 
-      <div className="module-button-row d-flex flex-wrap justify-content-center gap-3 mb-5">
+      <div className="module-button-row d-flex flex-wrap justify-content-center gap-3 mb-5 display-7">
         {modulesData.map((mod) => (
           <button
             key={mod.id}
@@ -104,15 +104,17 @@ const ModulesOverlay = () => {
       <div
         className="module-showcase position-relative overflow-hidden premium-shadow w-100 mx-auto"
       >
-        <img
-          src={activeModule.image}
-          alt={activeModule.name}
-          className="w-100 h-100 object-fit-cover module-showcase-image"
-          style={{
-            opacity: fade ? 0 : 0.8,
-            transition: 'opacity 0.3s ease-in-out'
-          }}
-        />
+        <div className="module-showcase-image-wrap d-flex align-items-center justify-content-center">
+          <img
+            src={activeModule.image}
+            alt={activeModule.name}
+            className="module-showcase-image"
+            style={{
+              opacity: fade ? 0 : 1,
+              transition: 'opacity 0.3s ease-in-out'
+            }}
+          />
+        </div>
 
         <div
           className="module-showcase-copy position-absolute bottom-0 start-0 w-100 d-flex flex-column justify-content-end"
@@ -122,9 +124,9 @@ const ModulesOverlay = () => {
             transition: 'all 0.4s ease-in-out'
           }}
         >
-          <div className="glass-panel module-showcase-card border-0 bg-transparent text-white">
-            <h3 className="display-6 fw-bolder mb-3">{activeModule.title}</h3>
-            <p className="lead mb-0 text-white-50 module-showcase-description">
+          <div className="module-showcase-card border-0">
+            <h3 className="display-6 fw-bolder mb-3 text-white">{activeModule.title}</h3>
+            <p className="lead mb-0 module-showcase-description">
               {activeModule.description}
             </p>
           </div>
